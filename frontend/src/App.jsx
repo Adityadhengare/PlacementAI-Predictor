@@ -81,7 +81,7 @@ function PredictorForm() {
     if (resumeFile) { submitData.append('resume', resumeFile); }
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/predict', submitData, {
+      const response = await axios.post('https://placementai-predictor-1.onrender.com/predict', submitData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setResult(response.data.prediction);
